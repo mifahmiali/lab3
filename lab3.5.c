@@ -16,7 +16,7 @@ int child()
 
 void sigint(int sig)
 {
-	printf("YOU FOUND AN EASTER EGG\n");
+	printf("SIGNAL INTERRUPTED\n");
 }
 
 int main(void)
@@ -44,12 +44,12 @@ int main(void)
 		{
 			if (number % a == 0 || number < 2)
 			{
-				printf("\nNumber is not a prime\n");
+				printf("\nInput is not a prime number\n");
 				exit(EXIT_SUCCESS);
 			}
 			a++;
 		}
-		printf("\nNumber is a prime\n");
+		printf("\nInput is a prime number\n");
 	}
 	else if (pid == 0)
         {

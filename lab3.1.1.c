@@ -40,3 +40,18 @@ int main(void)
 	return (0);
 
 }
+
+void sigint_handler(int sig)
+{
+	printf("This is a special signal handler for CTRL + C, sig = %d\n", sig);
+}
+
+void sigquit_handler(int sig)
+{
+        printf("This is a special signal handler for CTRL + \\, sig = %d\n", sig);
+}
+void sigtstp_handler(int sig)
+{
+        printf("This is a special signal handler for CTRL + Z, sig = %d\n", sig);
+}
+
